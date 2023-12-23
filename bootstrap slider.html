@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>bootstrap slider</title>
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <style>
+   
+    .carousel-inner {
+      height: 100%;
+    }
+
+    .carousel-caption {
+      bottom: 35rem;
+    }
+
+    #carouselExampleCaptions {
+      height: 600px;
+    }
+
+    .d-block w-100 {
+      width: 100%;
+      height: 100%;
+    }
+
+    .carousel-indicators [data-bs-target] {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      margin: 10px;
+    }
+
+    .carousel-control-next,
+    .carousel-control-prev {
+      opacity: 1;
+    }
+
+    h1 {
+      color: orangered;
+      margin-top: 30px;
+    }
+
+    p {
+      color: rgb(236, 113, 68);
+      font-size: 20px;
+      font-weight: bold;
+
+    }
+
+    img {
+      position: relative;
+    }
+
+    img::before {
+      height: 100%;
+      width: 100%;
+      content: "";
+      background-color: black;
+      opacity: 1;
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      right: 0%;
+    }
+
+    .navbar-brand {
+      font-weight: 1000;
+      color: white;
+    }
+
+    .navbar-brand:hover {
+      color: orange;
+    }
+
+    .card-footer {
+      font-weight: 900;
+      text-align: center;
+    }
+    .card-text {
+      font-weight: 100;
+      color: black;
+    }
+
+    .card-text1 {
+      text-align: center;
+    }
+
+    .card-title {
+      text-align: center;
+      font-size: 40px;
+    }
+
+    .card-header {
+      text-align: center;
+      font-size: 50px;
+      font-weight: 300;
+      margin-top: 80px;
+    }
+
+    .card img {
+      height: 184px;
+    }
+
+    .nav-link:hover {
+      color: orange;
+    }
+
+    .modal-body {
+      color: aliceblue;
+    }
+    .parent1
+    {
+      background-image: url(resources/background-zoom-calls-with-bookcase_23-2149684453.jpg);
+      height: 250px;
+      width: 100%;
+      margin-top: 50px;
+    }
+    .parent1 h5
+    {
+      font-size: 30px;
+    }
+    h2
+    {
+      text-align: center;
+      color: orange;
+  }
+   .parent2 h1
+   {
+    text-align: center;
+    color: black;
+    margin-top: 100px;
+   }
+   .div1{
+    height: 250px;
+    position: relative;
+   }
+   .div1 img{
+    height: 100%;
+    width: 100%;
+   }
+   .div2
+   {
+    background-color:rgb(87, 81, 81);
+    color: white;
+    height: 20%;
+    width: 40%;
+    position: absolute;
+    bottom: 20%;
+    left: 8%;
+    opacity: 0;
+    transition: all 1s linear;
+    text-align: center;
+    margin-left: 70px;
+   }
+   .div1:hover .div2
+   {
+    opacity: 1;
+    transform: rotateY(-360deg);
+   }
+   .parent3
+   {
+    background-color: black;
+   }
+  .parent3 h6
+  {
+    color: white;
+  }
+  .parent3 p
+{
+  color: white;
+  font-size: 14px;
+}
+.parent3 h5
+{
+color: orange;
+margin-top: 20px;
+}
+.parent3 h1
+{
+  color: white;
+  text-align: center;
+}
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">INTERIOR SPA</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item me-3">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item me-3">
+            <a class="nav-link active" aria-current="page" href="#">Project</a>
+          </li>
+          <li class="nav-item me-3">
+            <a class="nav-link active" aria-current="page" href="#">Services</a>
+          </li>
+          <li class="nav-item me-3">
+            <a class="nav-link active" aria-current="page" href="#">About Us</a>
+          </li>
+
+          <li class="nav-item me-3 dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu me-3">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Queries</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Contact Us</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          REGISTER
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Register Here</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form action="#" method="get">
+                  <label>First Name</label><br>
+                  <input type="text" placeholder="First name" autofocus name="nm" required><br><br>
+                  <label>Last Name</label><br>
+                  <input type="text" placeholder="Last name" autofocus name="nm" required><br><br>
+                  <label>E-mail</label><br>
+                  <input type="email" placeholder="enter your mail" name="mail"><br><br>
+                  <label>Password</label><br>
+                  <input type="password" placeholder="your password" name="pass"><br><br>
+                  <label>Phone No.</label><br>
+                  <input type="tel" placeholder="your phone no." name="ph"><br><br>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary w-100">REGISTER</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </nav>
+
+<!-- navbar close  -->
+
+  <div id="carouselExampleCaptions" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+        aria-label="Slide 4"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+        aria-label="Slide 5"></button>
+
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="resources/armchair-green-living-room-with-copy-space.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h1>LET YOUR HOME BE SIMPLE AND STYLISH</h1>
+          <p>nulla pellentesque mi non laoreet eleifend. integer porttitor mollis lorem, at molestie arcu pulvinar ut.
+            proin ac fermentum est. cras mi ipsum, consectetur ac ipsum in, egestas vestibulum tellus.
+
+            Read More
+          </p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="resources/home.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h1>LET YOUR HOME BE DESIGNED AND DECORATIVE</h1>
+          <p>nulla pellentesque mi non laoreet eleifend. integer porttitor mollis lorem, at molestie arcu pulvinar ut.
+            proin ac fermentum est. cras mi ipsum, consectetur ac ipsum in, egestas vestibulum tellus.
+
+            Read More </p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="resources/home decor.webp" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h1>LET YOUR HOME BE DESIGNED WITH EXPERTS</h1>
+          <p>nulla pellentesque mi non laoreet eleifend. integer porttitor mollis lorem, at molestie arcu pulvinar ut.
+            proin ac fermentum est. cras mi ipsum, consectetur ac ipsum in, egestas vestibulum tellus.
+
+            Read More</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="resources/easter-home-decor-ideas.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h1>LET YOUR HOME BE CREATIVE AND STYLISH</h1>
+          <p>nulla pellentesque mi non laoreet eleifend. integer porttitor mollis lorem, at molestie arcu pulvinar ut.
+            proin ac fermentum est. cras mi ipsum, consectetur ac ipsum in, egestas vestibulum tellus.
+
+            Read More</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="resources/home-decor-trends.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h1>LET YOUR HOME BE STYLISH WITH BEST</h1>
+          <p>nulla pellentesque mi non laoreet eleifend. integer porttitor mollis lorem, at molestie arcu pulvinar ut.
+            proin ac fermentum est. cras mi ipsum, consectetur ac ipsum in, egestas vestibulum tellus.
+
+            Read More</p>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+</div>
+
+<!-- slider close  -->
+
+    <div class="parent">
+      <div class="container">
+        <div class="card-header">
+          SERVICES
+        </div>
+        <div class="row">
+          <div class="col-lg-3 col-sm-12 col-md-6">
+            <div class="card" style="width: 100%;">
+              <img src="resources/background-zoom-calls-with-bookcase_23-2149684453.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text">Lorem Ipsum Dolor Sit Amet Augueit, Consectet Adipiscing Elit. Quisque Utrisus Eget
+                  Libero Finibus Sollicitudin Quisi Mauris.</p>
+                <div class="card-footer bg-transparent border-success">Hospitaly Design</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-12 col-md-6">
+            <div class="card" style="width: 100%;">
+              <img src="resources/living-room-mid-century-style-with-warm-colors-ai-generative.jpg" class="card-img-top"
+                alt="...">
+              <div class="card-body">
+                <p class="card-text">Lorem Ipsum Dolor Sit Amet Augueit, Consectet Adipiscing Elit. Quisque Utrisus Eget
+                  Libero Finibus Sollicitudin Quisi Mauris.</p>
+                <div class="card-footer bg-transparent border-success">Residential Design</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-12 col-md-6">
+            <div class="card" style="width: 100%;">
+              <img src="resources/yellow-armchair-living-room-with-copy-space.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text">Lorem Ipsum Dolor Sit Amet Augueit, Consectet Adipiscing Elit. Quisque Utrisus Eget
+                  Libero Finibus Sollicitudin Quisi Mauris.</p>
+                <div class="card-footer bg-transparent border-success">Office Design</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-12 col-md-6">
+            <div class="card" style="width: 100%;">
+              <img src="resources/kitchen.avif" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text">Lorem Ipsum Dolor Sit Amet Augueit, Consectet Adipiscing Elit. Quisque Utrisus Eget
+                  Libero Finibus Sollicitudin Quisi Mauris.</p>
+                <div class="card-footer bg-transparent border-success">Kitchen Design</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+       <!-- services column closed -->
+
+
+
+       <div class="parent">
+        <div class="container">
+          <div class="card-header">
+            TEAM MEMBERS
+          </div>
+          <div class="row">
+            <div class="col-lg-3 col-sm-12 col-md-6">
+              <div class="card" style="width: 100%;">
+                <img src="resources/man.avif" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">DAVID JACKSON</h5>
+                  <p class="card-text">He is very polite and humble person. he is very passionate towards his work and good observer.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-12 col-md-6">
+              <div class="card" style="width: 100%;">
+                <img src="resources/woman.avif" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">DIVYA SINGH</h5>
+                  <p class="card-text">she is very kind person. she is serious towards his work. she knows her responsibility well. </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-12 col-md-6">
+              <div class="card" style="width: 100%;">
+                <img src="resources/cheerful-curly-business-girl-wearing-glasses_176420-206.avif" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">RUHANI SHARMA</h5>
+                  <p class="card-text">she is very kind person. she is serious towards his work. she knows her responsibility well.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-12 col-md-6">
+              <div class="card " style="width: 100%;">
+                <img src="resources/stylish-handsome-indian-man-tshirt-pastel-wall_496169-1571.avif" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">RUDRANSH SINGH</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+       </div>
+       <!-- team members column closed -->
+
+       <div class="parent1">
+         <div class="container">
+          <h2>STATS</h2>
+          <div class="row">
+            <div class="col-3">
+          <div class="card rounded-circle text-center pt-5" style="width: 70%; height:180px;">
+            <div class="card-body">
+              <h5 class="card-title">clients</h5>
+              <p class="card-text">450</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="card rounded-circle text-center pt-5" style="width: 70%; height:180px;">
+            <div class="card-body">
+              <h5 class="card-title">designs</h5>
+              <p class="card-text">340</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="card rounded-circle text-center pt-5" style="width: 70%; height:180px;">
+            <div class="card-body">
+              <h5 class="card-title">experience</h5>
+              <p class="card-text">20</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="card rounded-circle text-center pt-5" style="width: 70%; height:180px;">
+            <div class="card-body">
+              <h5 class="card-title">branches</h5>
+              <p class="card-text">229</p>
+            </div>
+          </div>
+        </div>
+        </div>
+         </div>
+       </div>
+
+
+       <!-- stats column closed -->
+
+       <div class="parent2">
+        <div class="container">
+          <h1>MY PROJECTS</h1>
+          <div class="row">
+            <div class="col-4" >
+              <div class="div1">
+                <img src="resources/armchair-green-living-room-with-copy-space.jpg" alt="" height="100%" width="100%">
+                <div class="div2">
+                  INTERIOR SPA
+                  <p>some text here</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-4">
+              <div class="div1">
+                <img src="resources/background-zoom-calls-with-bookcase_23-2149684453.jpg" alt="">
+                <div class="div2">
+                  INTERIOR SPA
+                  <p>some text here</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="div1">
+                <img src="resources/home decor.webp" alt="">
+                <div class="div2">
+                  INTERIOR SPA
+                  <p>some text here</p>
+                </div>
+              </div>
+            </div>
+            </div>
+         
+          <div class="row my-5">
+            <div class="col-4">
+              <div class="div1">
+                <img src="resources/armchair-green-living-room-with-copy-space.jpg" alt="">
+                <div class="div2">
+                  INTERIOR SPA
+                  <p>some text here</p>
+                </div>
+              </div>
+            </div>
+          
+            <div class="col-4">
+              <div class="div1">
+                <img src="resources/background-zoom-calls-with-bookcase_23-2149684453.jpg" alt="">
+                <div class="div2">
+                  INTERIOR SPA
+                  <p>some text here</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="div1">
+                <img src="resources/home decor.webp" alt="">
+                <div class="div2">
+                  INTERIOR SPA
+                  <p>some text here</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <div class="row my-5">
+            <div class="col-4">
+              <div class="div1">
+                <img src="resources/armchair-green-living-room-with-copy-space.jpg" alt="">
+                <div class="div2">
+                  INTERIOR SPA
+                  <p>some text here</p>
+                </div>
+              </div>
+            </div>
+          
+            <div class="col-4">
+              <div class="div1">
+                <img src="resources/background-zoom-calls-with-bookcase_23-2149684453.jpg" alt="">
+                <div class="div2">
+                  INTERIOR SPA
+                  <p>some text here</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="div1">
+                <img src="resources/home decor.webp" alt="">
+                <div class="div2">
+                  INTERIOR SPA
+                  <p>some text here</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+        </div>
+       </div>
+
+       <!-- projects column closed -->
+<div class="parent3">
+<div class="container">
+  <h1>Contact Us</h1>
+  <div class="row">
+    <div class="col-4">
+     <h5>Contact info</h5>
+     <h6>visit us</h6>
+     <p>pharma via,modena,BO,Italy</p><br><br>
+
+<h6>Mail Us</h6>
+     <p>info@example.com</p><br><br>
+     <h6>Call us</h6>
+     <p>+18044261149</p>
+</div>
+<div class="col-4 mx-5">
+  <h5>Please Fill This Form</h5>
+  <input type="text" placeholder="enter name"><br><br>
+  <input type="tel" placeholder="enter your number"><br><br>
+  <input type="Email" placeholder="Email"><br><br>
+   <input type="password" placeholder="password"><br><br>
+  <textarea placeholder="Give Suggestions..." rows="5" cols="50"></textarea><br><br>
+  <input type="submit" value="signup">
+  <input type="reset">
+  <button type="submit">submit</button><br><br>
+</div>
+</div>
+ 
+</div>
+</div>
+    
+      
+       
+        
+      
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
